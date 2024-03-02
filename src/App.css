@@ -1,38 +1,77 @@
-.App {
-  text-align: center;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Primary */
+
+  --Desaturated_Dark_Cyan: hsl(180, 29%, 50%);
+
+  /* Neutral */
+
+  --Light_Grayish_Cyan_Bg: hsl(180, 52%, 96%);
+  --Light_Grayish_Cyan_Filter_Tablets: hsl(180, 31%, 95%);
+  --Dark_Grayish_Cyan: hsl(180, 8%, 52%);
+  --Very_Dark_Grayish_Cyan: hsl(180, 14%, 20%);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: var(--Light_Grayish_Cyan_Bg);
+  color: var(--Very_Dark_Grayish_Cyan);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.card {
+  background-color: #fff;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.company_name {
+  color: var(--Dark_Grayish_Cyan);
 }
 
-.App-link {
-  color: #61dafb;
+.posting li:nth-child(1) {
+  list-style: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.tool {
+  color: var(--Desaturated_Dark_Cyan);
+  background-color: var(--Light_Grayish_Cyan_Filter_Tablets);
+}
+
+.bg-img {
+  background-color: var(--Desaturated_Dark_Cyan);
+}
+
+.filters {
+  background-color: #fff;
+}
+
+.filter {
+  background-color: var(--Light_Grayish_Cyan_Filter_Tablets);
+  color: var(--Desaturated_Dark_Cyan);
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.filter::after {
+  content: url('../public/images/icon-remove.svg');
+  background-color: var(--Desaturated_Dark_Cyan);
+  padding: 0.5em;
+}
+
+.filter:hover::after {
+  background-color: var(--Very_Dark_Grayish_Cyan);
+}
+
+.active {
+  background-color: var(--Desaturated_Dark_Cyan);
+  color: #fff;
+}
+
+.clear {
+  color: var(--Desaturated_Dark_Cyan);
+  cursor: pointer;
+}
+
+.clear:hover {
+  text-decoration: underline;
 }
