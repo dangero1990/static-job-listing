@@ -22,7 +22,7 @@ function Header() {
   return (
     <>
       <img
-        src='./images/bgHeaderDesktop.svg'
+        src='./static-job-listing/images/bgHeaderDesktop.svg'
         alt='background image'
         className='-mb-16 w-[100%] bg-img'
         aria-hidden='true'

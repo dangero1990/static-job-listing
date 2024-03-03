@@ -29,11 +29,11 @@ function Card({ newJob, featured, company, logo, position, postedAt, contract, l
   return (
     <article
       id={id}
-      className={featured ? 'grid grid-cols-[auto_2fr_1fr] p-8 card rounded-xl featured-card' : 'grid grid-cols-[auto_2fr_1fr] p-8 card rounded-xl'}
+      className={featured ? 'grid grid-cols-[auto_2fr_1fr] p-8 card rounded-xl featured-card relative' : 'grid grid-cols-[auto_2fr_1fr] p-8 card rounded-xl relative'}
     >
       <img
-        className=' ml-4 mr-4'
-        src={logo}
+        className=' ml-4 mr-4 mx-auto my-auto'
+        src={`./static-job-listing${logo.slice(1)}`}
         alt={company}
       />
       <div className='mt-auto mb-auto'>
@@ -47,6 +47,7 @@ function Card({ newJob, featured, company, logo, position, postedAt, contract, l
           <li>{location}</li>
         </ul>
       </div>
+      <hr />
       <ul className='flex gap-2 mt-auto mb-auto justify-self-end'>
         <FilterButton props={role} />
         <FilterButton props={level} />
