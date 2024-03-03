@@ -25,7 +25,7 @@ function FilterButton({ props }) {
   );
 }
 
-function Card({ company, logo, position, postedAt, contract, location, role, level, languages, tools, id }) {
+function Card({ newJob, featured, company, logo, position, postedAt, contract, location, role, level, languages, tools, id }) {
   return (
     <article
       id={id}
@@ -37,7 +37,9 @@ function Card({ company, logo, position, postedAt, contract, location, role, lev
         alt={company}
       />
       <div className='mt-auto mb-auto'>
-        <h3 className='company_name font-bold'>{company}</h3>
+        <h3 className='company_name font-bold inline mr-4'>{company}</h3>
+        {newJob ? <span className='new mr-4 pr-2 pl-2 font-bold rounded-xl'>NEW!</span> : null}
+        {featured ? <span className='featured mr-4 pr-2 pl-2 font-bold rounded-xl'>FEATURED</span> : null}
         <h2 className='font-bold'>{position}</h2>
         <ul className='flex gap-8 list-disc posting'>
           <li>{postedAt}</li>
@@ -70,14 +72,14 @@ function Main() {
   const filteredJobs = context.userFilter.length === 0 ? context.userJobs.data : context.userJobs.data.filter((job) => context.userFilter.every((filter) => Object.values(job).some((item) => (Array.isArray(item) ? item.includes(filter) : item === filter))));
 
   return (
-    <section className='m-auto max-w-[80%] grid gap-4'>
+    <section className='m-auto w-[80%] max-w-[80%] grid gap-4'>
       {filteredJobs.map((job) => (
         <Card
           id={job.id}
           key={job.id}
           company={job.company}
           logo={job.logo}
-          new={job.new}
+          newJob={job.new}
           featured={job.featured}
           position={job.position}
           role={job.role}

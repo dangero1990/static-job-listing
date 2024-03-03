@@ -18,18 +18,44 @@
 body {
   background-color: var(--Light_Grayish_Cyan_Bg);
   color: var(--Very_Dark_Grayish_Cyan);
+  font-size: 15px;
 }
 
 .card {
   background-color: #fff;
+  border-left: 3px solid transparent;
+  transition: border-left-color 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  border-left-color: var(--Desaturated_Dark_Cyan);
+}
+
+.card:hover h2 {
+  color: var(--Desaturated_Dark_Cyan);
 }
 
 .company_name {
   color: var(--Dark_Grayish_Cyan);
 }
 
+.new {
+  background-color: var(--Desaturated_Dark_Cyan);
+  color: #fff;
+}
+
+.featured {
+  background-color: var(--Very_Dark_Grayish_Cyan);
+  color: #fff;
+}
+
 .posting li:nth-child(1) {
   list-style: none;
+}
+
+.posting li {
+  color: var(--Dark_Grayish_Cyan);
 }
 
 .tool {

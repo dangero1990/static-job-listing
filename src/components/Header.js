@@ -24,7 +24,7 @@ function Header() {
       <img
         src='./images/bgHeaderDesktop.svg'
         alt='background image'
-        className='-mb-16 bg-img'
+        className='-mb-16 w-[100%] bg-img'
         aria-hidden='true'
       />
       {jobs.userFilter.length === 0 ? null : (
