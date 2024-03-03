@@ -29,7 +29,7 @@ function Card({ newJob, featured, company, logo, position, postedAt, contract, l
   return (
     <article
       id={id}
-      className='grid grid-cols-[auto_2fr_1fr] p-8 card rounded-xl'
+      className={featured ? 'grid grid-cols-[auto_2fr_1fr] p-8 card rounded-xl featured-card' : 'grid grid-cols-[auto_2fr_1fr] p-8 card rounded-xl'}
     >
       <img
         className=' ml-4 mr-4'

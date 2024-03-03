@@ -27,24 +27,22 @@ function Header() {
         className='-mb-16 w-[100%] bg-img'
         aria-hidden='true'
       />
-      {jobs.userFilter.length === 0 ? null : (
-        <section className='filters flex justify-between w-[80%] max-w-[80%] mx-auto p-8 rounded-xl'>
-          <ul className='flex gap-4'>
-            {jobs.userFilter.map((filter) => (
-              <Filters
-                key={filter}
-                props={filter}
-              />
-            ))}
-          </ul>
-          <span
-            className='clear my-auto font-bold'
-            onClick={() => jobs.userSetFilter([])}
-          >
-            Clear
-          </span>
-        </section>
-      )}
+      <section className={jobs.userFilter.length === 0 ? 'filters flex justify-between w-[80%] max-w-[80%] mx-auto p-8 rounded-xl invisible' : 'filters flex justify-between w-[80%] max-w-[80%] mx-auto p-8 rounded-xl'}>
+        <ul className='flex gap-4'>
+          {jobs.userFilter.map((filter) => (
+            <Filters
+              key={filter}
+              props={filter}
+            />
+          ))}
+        </ul>
+        <span
+          className='clear my-auto font-bold'
+          onClick={() => jobs.userSetFilter([])}
+        >
+          Clear
+        </span>
+      </section>
     </>
   );
 }
