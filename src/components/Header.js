@@ -24,7 +24,7 @@ function Header() {
       <img
         src='./static-job-listing/images/bgHeaderDesktop.svg'
         alt='background image'
-        className='-mb-16 w-[100%] bg-img'
+        className='-mb-20 w-[100%] bg-img'
         aria-hidden='true'
       />
       <section className={jobs.userFilter.length === 0 ? 'filters flex justify-between w-[80%] max-w-[80%] mx-auto p-8 rounded-xl invisible' : 'filters flex justify-between w-[80%] max-w-[80%] mx-auto p-8 rounded-xl'}>
