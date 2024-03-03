@@ -33,7 +33,7 @@ function Card({ newJob, featured, company, logo, position, postedAt, contract, l
     >
       <img
         className=' ml-4 mr-4 mx-auto my-auto'
-        src={`./static-job-listing${logo.slice(1)}`}
+        src={logo}
         alt={company}
       />
       <div className='mt-auto mb-auto'>
