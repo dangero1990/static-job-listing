@@ -38,8 +38,10 @@ function Card({ newJob, featured, company, logo, position, postedAt, contract, l
       />
       <div className='mt-auto mb-auto'>
         <h3 className='company_name font-bold inline mr-4'>{company}</h3>
-        {newJob ? <span className='new mr-4 pr-2 pl-2 font-bold rounded-xl'>NEW!</span> : null}
-        {featured ? <span className='featured mr-4 pr-2 pl-2 font-bold rounded-xl'>FEATURED</span> : null}
+        <div className='new-featured inline'>
+          {newJob ? <span className='new mr-4 pr-2 pl-2 font-bold rounded-xl'>NEW!</span> : null}
+          {featured ? <span className='featured mr-4 pr-2 pl-2 font-bold rounded-xl'>FEATURED</span> : null}
+        </div>
         <h2 className='font-bold'>{position}</h2>
         <ul className='flex gap-8 list-disc posting'>
           <li>{postedAt}</li>

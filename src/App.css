@@ -120,6 +120,10 @@ hr {
   .card ul {
     flex-wrap: wrap;
   }
+
+  .new-featured {
+    display: block;
+  }
 }
 
 @media (max-width: 700px) {
@@ -144,5 +148,9 @@ hr {
   .card ul {
     justify-self: left;
     flex-wrap: wrap;
+  }
+
+  .new-featured {
+    display: block;
   }
 }
