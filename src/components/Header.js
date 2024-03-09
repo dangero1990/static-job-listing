@@ -28,7 +28,7 @@ function Header() {
         aria-hidden='true'
       />
       <section className={jobs.userFilter.length === 0 ? 'filters flex justify-between w-[80%] max-w-[80%] mx-auto p-8 rounded-xl invisible' : 'filters flex justify-between w-[80%] max-w-[80%] mx-auto p-8 rounded-xl'}>
-        <ul className='flex gap-4'>
+        <ul className='flex gap-4 flex-wrap'>
           {jobs.userFilter.map((filter) => (
             <Filters
               key={filter}
